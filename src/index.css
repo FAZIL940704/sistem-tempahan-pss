@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  --color-neon-blue: #0077ff;
+  --color-neon-cyan: #00aaff;
+  --color-neon-green: #22c55e;
+  --color-neon-red: #ef4444;
+  --color-neon-gold: #f59e0b;
+  
+  --color-glass-bg: rgba(255, 255, 255, 0.9);
+  --color-glass-border: rgba(34, 197, 94, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-[#f0fdf4] text-[#064e3b] min-h-screen;
+    background: 
+      radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.25) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(21, 128, 61, 0.25) 0, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(187, 247, 208, 0.6) 0, transparent 100%),
+      #f0fdf4;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/85 border border-green-300/60 backdrop-blur-xl shadow-xl;
+}
+
+.neon-text-blue {
+  @apply text-neon-blue;
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+}
+
+.neon-border-blue {
+  @apply border-neon-blue;
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+.neon-border-gold {
+  @apply border-neon-gold;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+}
+
+.markdown-body {
+  @apply text-sm leading-relaxed;
+}
